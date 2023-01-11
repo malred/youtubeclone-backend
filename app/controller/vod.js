@@ -24,7 +24,7 @@ class VodController extends Controller {
         const query = this.ctx.query
         // 校验
         this.ctx.validate({
-            VideoId: { type: 'string' },
+            videoId: { type: 'string' },
         }, query)
         this.ctx.body = await this.app.vodClient.request(
             "RefreshUploadVideo",
